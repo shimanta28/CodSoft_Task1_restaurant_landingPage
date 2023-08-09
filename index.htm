@@ -1,1 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        .carousel-item {
+
+            height: 100vh;
+        }
+
+        li {
+            color: white;
+        }
+
+        .c {
+            background-position: bottom;
+        }
+
+        p {
+            width: 500px;
+        }
+
+        i {
+            font-size: 50px;
+        }
+
+        .card-body {
+            word-wrap: break-word;
+        }
+
+        .carousel-inner::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0%;
+            left: 0%;
+            background: rgb(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .car-cap {
+
+            z-index: 2;
+            /* position: relative;
+      bottom: 85%;
+      width: 650px; */
+            background-color: aquamarine;
+
+
+        }
+
+        .carousel-caption {
+            z-index: 2;
+            bottom: 130px;
+        }
+
+        .abou {
+            font-family: 'Great Vibes', cursive;
+            font-size: 60px;
+            color: rgb(221, 177, 3);
+
+        }
+
+        .section-padding {
+            padding-top: 100px;
+
+
+        }
+
+        .menu {
+            background-image: url(nordwood-themes-mue4Jwr-N5M-unsplash.jpg);
+            height: 560px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .dish {
+            background-image: url(lily-morello-8y6O9N5eKGI-unsplash.jpg);
+            height: 560px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .textt {
+            /* height: 200px;
+      width: 200px; */
+            color: white;
+            position: absolute;
+            z-index: 2;
+            width: 500px;
+
+        }
+
+        /* .navbar{
+            position: absolute;
+            z-index: 2;
+        } */
+        .footer {
+            width: 100%;
+            height: 150px;
+            background-color: rgb(1, 1, 18);
+        }
+
+        .part {
+            color: aliceblue;
+        }
+
+        .sub {
+            font-size: 15px;
+            color: rgb(180, 180, 180);
+        }
+
+        .del {
+            font-size: 35px;
+            font-weight: 300;
+        }
+
+        .mn {
+            font-size: 17px;
+        }
+
+        .input-group {
+            padding: 0;
+        }
+
+        i {
+            font-size: 20px;
+            color: rgb(180, 180, 180);
+            ;
+        }
+
+        .icons {
+            padding: 0;
+            padding-top: 12px;
+            padding-right: 34px;
+        }
+
+        .hmt {
+            font-size: 100px;
+        }
+
+        /* a{
+            height: 20px;
+            border: 50%;
+        } */
+        .imgs {
+            transition: all 0.7s ease;
+        }
+
+        .imgs:hover {
+
+            transform: translate(0%, -15%);
+            opacity: 1;
+
+        }
+        /* .aboutText{
+            
+            justify-content: center;
+            margin: auto;
+        } */
+        .aboutText p{
+          
+            /* justify-content: center; */
+            width: 100%;
+        }
+        .mid{
+          
+            margin: 0%;
+        }
+        .nav-link{
+            transition: all 0.7s ease;
+            border-bottom: 0px;
+           
+        }
+        .nav-link:hover{
+            border-bottom: 1px;
+            transform: translateY(-10%);
+
+            background-color: rgb(221, 177, 3);
+            border-radius: 5px;
+        }
+
+        .hmt{
+            transition: all 0.7s ease;
+        }
+        .hmt:hover{
+           
+            font-size: 100px;
+            color: rgb(221, 177, 3);
+
+        }
+        .abou2{
+            font-family: 'Great Vibes', cursive;
+            font-size: 100px;
+            color: rgb(221, 177, 3);
+            transition: all 0.7s ease;
+        }
+        .hmt:hover .abou2{
+            color: white;
+        }
+
+       
+       </style>
+</head>
+
+<body>
+    <!-- nav goes here -->
+    <section id="home">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container ">
+                <a class="navbar-brand abou" href="#" style=" font-weight: 500;">BonApetit</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex ">
+                        <li class="nav-item">
+                            <a class="nav-link active home" aria-current="page" href="#home"
+                                style="color: rgb(222, 222, 222); font-weight: 500;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#about"
+                                style="color: rgb(222, 222, 222); font-weight: 500;">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#menu"
+                                style="color: rgb(222, 222, 222); font-weight: 500;">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#dish"
+                                style="color: rgb(222, 222, 222); font-weight: 500;">Dishes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#contact"
+                                style="color: rgb(222, 222, 222); font-weight: 500;">Contacts</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- nav background goes here -->
+    <div id="carouselExampleCaptions about" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="nafinia-putra-Kwdp-0pok-I-unsplash.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <!-- <h1 class="abou">Welcome</h1> -->
+                    <br>
+                    <h1 class="hmt">Good <span class="abou2" style="font-size: 100px;">Food,</span> <br><span
+                            class="abou2" style="font-size: 100px;">Great,</span> Mood</h1>
+                    <!-- <h5 class="hm-t"> ratione nisi aliquam odit illum quis eaque nesciunt voluptate optio esse unde, sunt culpa sint
+                        corrupti
+                        suscipit maiores quae dignissimos vitae placeat fuga? Cupiditate dolorem hic delectus incidunt?
+                    </h5> -->
+                    <br><br><br>
+                    <h5><a href="" class=" btn mt-3 btn-warning">Book Table</a></h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- about us goes here -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="img">
+                        <img src="max-griss-8mVLMZ0WW98-unsplash.jpg" alt="" class="img-fluid">
+                    </div>
+
+                </div>
+                <div class="col-lg-4  mt-md-5 mid">
+                    <div class="text text-center">
+                        <h1 class="text-center abou">About Us</h1>
+                        <br><br>
+                        <div class="aboutText">
+                            <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
+                                explicabo
+                                cupiditate temporibus, tenetur deserunt officia doloribus, est architecto, harum atque
+                                id
+                                natus? Iusto,
+                                commodi. Odio alias architecto sunt amet cumque?Lorem ipsum, dolor sit amet consectetur
+                                adipisicing
+                                elit. Nihil, magni aliquam adipisci doloremque eius laudantium expedita, voluptas
+                                voluptatum, recusandae
+                                distinctio eligendi ut! Sint, nisi? Corrupti maiores in non magnam aut.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="img">
+                        <img src="max-griss-cToNEm70cvE-unsplash.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- menu page goes here -->
+    <section id="menu" class="section-padding">
+        <section class="carousel-inner">
+            <div class="menu">
+                <div class="textt">
+                    <h1 class="text-center">MENU</h1>
+                    <h1 class="abou text-center">High quality meals</h1>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quaerat rerum,
+                        laborum
+                        laboriosam tempora non unde maxime debitis labore voluptate tempore expedita! Natus ut esse,
+                        nobis
+                        fuga nam
+                        obcaecati tempora!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- menu card goes here -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center abou">Our Menu</h1>
+            </div>
+            <div class="row pt-5">
+                <div class="col-3">
+                    <div class="row">
+                        <div class="img-body">
+                            <img src="sam-moghadam-khamseh-yxZSAjyToP4-unsplash.jpg" class="img-fluid imgs" alt="">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row text-center">
+                        <h6>DESSERTS</h6>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="row">
+                        <div class="img-body">
+                            <img src="sam-moghadam-khamseh-yxZSAjyToP4-unsplash.jpg" class="img-fluid imgs" alt="">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row text-center">
+                        <h6>BREAKFAST</h6>
+                    </div>
+
+                </div>
+
+                <div class="col-3">
+                    <div class="row">
+                        <div class="img-body">
+                            <img src="sam-moghadam-khamseh-yxZSAjyToP4-unsplash.jpg" class="img-fluid imgs" alt="">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row text-center">
+                        <h6>SOUP</h6>
+                    </div>
+
+                </div>
+
+                <div class="col-3">
+                    <div class="row">
+                        <div class="img-body">
+                            <img src="sam-moghadam-khamseh-yxZSAjyToP4-unsplash.jpg" class="img-fluid imgs" alt="">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row text-center">
+                        <h6>APPETIZERS</h6>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- dish page goes here -->
+    <section id="dish" class="section-padding">
+        <section class="carousel-inner">
+            <div class="dish">
+                <div class="textt">
+                    <h1 class="text-center">DISHES</h1>
+                    <h1 class="abou text-center">Best dishesh for you</h1>
+                    <p style="color: rgb(231, 230, 230);" class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quaerat rerum,
+                        laborum
+                        laboriosam tempora non unde maxime debitis labore voluptate tempore expedita! Natus ut esse,
+                        nobis
+                        fuga nam
+                        obcaecati tempora!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- dish page goes here -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-6" style="background-color: rgb(255, 255, 255);">
+                    <br><br><br><br><br>
+                    <h1 class="abou text-center">We do it well</h1>
+                    <br>
+                    <h5 class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero
+                        illum adipisci laboriosam nulla omnis quibusdam molestias sapiente, officiis alias autem expedit
+                    </h5>
+                    <br><br>
+                    <h6 class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic fuga,
+                        consequuntur consectetur explicabo nihil aut repudiandae? Suscipit nisi quia, iusto cupiditate
+                        tenetur est perferendis aperiam quibusdam qui ad. Illum, voluptas.
+                        Eveniet exercitationem itaque voluptatibus architecto expedita consectetur hic doloremque.
+                        Assumenda recusandae excepturi eveniet consequatur ut cumque aliquam odio quisquam, ullam saepe
+                        beatae repudiandae tempore praesentium eaque suscipit quam ex soluta.
+                        Laborum quibusdam blanditiis libero fugit alias rerum, quos deserunt nemo inventore eaque quasi
+                        quaerat consequuntur quae temporibus cupiditate perferendis voluptatem minima
+                    </h6>
+
+
+                </div>
+
+                <div class="col-6" style=>
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="thomas-tucker-MNtag_eXMKw-unsplash.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img src="thomas-tucker-MNtag_eXMKw-unsplash.jpg" class="img-fluid" alt="">
+                        </div>
+
+                    </div>
+                    <div class="row pt-4">
+                        <img src="ting-tian-_79ZJS8pV70-unsplash.jpg" alt="" class="img-fluid">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- footer goes here -->
+    <section class="section-padding" id="contact">
+        <div class="footer d-flex justify-content-evenly pt-4">
+            <div class="part">
+                <div class="row del abou">BonApetit</div>
+
+                <div class="row">
+                    <div class="col-4 icons">
+                        <a href="#home"> <i class="bi bi-instagram"></i></a>
+                    </div>
+                    <div class="col-4 icons">
+                        <i class="bi bi-facebook"></i>
+                    </div>
+                    <div class="col-4 icons">
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="part">
+                <div class="row mn">Work Hour</div>
+                <br>
+                <div class="row sub">Mon-Friday............................09:00-21:00</div>
+                <div class="row sub">Sat.............................................11:00-01:00</div>
+                <div class="row sub">Sun...........................................11:00-01:00</div>
+            </div>
+            <div class="part">
+                <div class="row mn">Contact Us</div>
+                <br>
+                <div class="row sub">abcdefg@gmail.com</div>
+                <div class="row sub">+91-00125485</div>
+
+            </div>
+            <div class="part">
+                <div class="row mn">Subscribe to our news</div>
+                <br>
+                <div class="row">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="email-address"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <div class="cpyrght text-center" style="background-color:  rgb(1, 1, 18); color:  rgb(180, 180, 180);">
+        <br>@2023 All
+        Rights Reserved. Development By <span class="abou" style="font-size: 20px; font-weight: 500;">Shimanta
+            Dey</span>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
